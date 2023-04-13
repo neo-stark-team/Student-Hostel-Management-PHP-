@@ -41,7 +41,7 @@ if(!empty($_POST["emailid"])) {
 		echo "error : You did not enter a valid email.";
 	}
 	else {
-		$result ="SELECT count(*) FROM userRegistration WHERE email=?";
+		$result ="SELECT count(*) FROM userregistration WHERE email=?";
 		$stmt = $mysqli->prepare($result);
 		$stmt->bind_param('s',$email);
 		$stmt->execute();
@@ -58,7 +58,7 @@ echo "<span style='color:red'> Email already exist. Please try again.</span>";
 if(!empty($_POST["regno"])) {
 	$regno= $_POST["regno"];
 
-		$result ="SELECT count(*) FROM userRegistration WHERE regNo=?";
+		$result ="SELECT count(*) FROM userregistration WHERE regNo=?";
 		$stmt = $mysqli->prepare($result);
 		$stmt->bind_param('s',$regno);
 		$stmt->execute();

@@ -14,7 +14,7 @@ $lname=$_POST['lname'];
 $gender=$_POST['gender'];
 $contactno=$_POST['contact'];
 $udate = date('d-m-Y h:i:s', time());
-$query="update  userRegistration set firstName=?,middleName=?,lastName=?,gender=?,contactNo=?,updationDate=? where id=?";
+$query="update  userregistration set firstName=?,middleName=?,lastName=?,gender=?,contactNo=?,updationDate=? where id=?";
 $stmt = $mysqli->prepare($query);
 $rc=$stmt->bind_param('ssssisi',$fname,$mname,$lname,$gender,$contactno,$udate,$aid);
 $stmt->execute();

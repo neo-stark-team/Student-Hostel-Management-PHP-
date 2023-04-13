@@ -32,7 +32,7 @@ $paddress=$_POST['paddress'];
 $pcity=$_POST['pcity'];
 $pstate=$_POST['pstate'];
 $ppincode=$_POST['ppincode'];
-	$result ="SELECT count(*) FROM userRegistration WHERE email=? || regNo=?";
+	$result ="SELECT count(*) FROM userregistration WHERE email=? || regNo=?";
 		$stmt = $mysqli->prepare($result);
 		$stmt->bind_param('ss',$email,$regno);
 		$stmt->execute();
